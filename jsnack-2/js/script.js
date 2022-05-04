@@ -6,17 +6,15 @@ const userNums = [];
 let numsSum = 0;
 // Condizione per chiedere numeri e pusharli nella array userNums finche la somma è < 50 
 while (numsSum < 50) {
-    if (numsSum < 50) {
-        const userNum = parseInt(prompt("inserisci un numero"));
-        console.log("Numero inserito dall'utente:", userNum);
-        if (numsSum < 50) {
-            // Ciclo per fare la somma dei numeri dell'array
-            for (let i = 0; i < userNums.length; i++) {
-                const num = userNums[i];
-                numsSum += num;
-                console.log("la somma è:", numsSum);
-            };
-            userNums.push(userNum)
-        };
-    };
+    // Chiedo all'utente di inserire un numero
+    const userNum = parseInt(prompt("inserisci un numero"));
+    // Pusho il numero nellarray
+    userNums.push(userNum);
+    // Controllo il numero inserito
+    console.log("Numero inserito dall'utente:", userNum);
+    // Sommo i numeri inseriti 
+    numsSum += userNum;
+    // Risultato della somma 
+    console.log("la somma è:", numsSum); 
+    
 } 
